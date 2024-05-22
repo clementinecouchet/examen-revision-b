@@ -7,6 +7,10 @@
     border-radius: 5px;
     color: #003566;
     box-shadow: 0px 0px 4px 0px rgba(#003566, 0.25);
+    animation-name: changeWidth;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
 
   .loader {
@@ -18,5 +22,48 @@
     background: #ffbe0b;
     border-radius: 50px;
     color: #fff;
+    animation-name: colorChange;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes changeWidth {
+  0% {
+    box-shadow: none;
+  }
+
+  25% {
+    box-shadow: 0px 0px 4px 6px rgba(0, 53, 102, 0.25);
+  }
+
+  50% {
+    box-shadow: none;
+  }
+
+  75% {
+    box-shadow: 0px 0px 4px 6px rgba(0, 53, 102, 0.25);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #ffc300;
+  }
+
+  33% {
+    background-color: #ff006e;
+  }
+
+  66% {
+    background-color: #8338ec;
+  }
+
+  100% {
+    background-color: #ffc300;
   }
 }
